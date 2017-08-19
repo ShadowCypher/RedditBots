@@ -33,11 +33,7 @@ def runb(r, replcomm):
 			print "Replied to comment " + comment.id
 			replcomm.append(comment.id)
 
-		if "Who is" in comment.body and comment.id not in replcomm and comment.author != r.user.me():
-			with open ("replcomm.txt", "a") as f:
-				f.write(comment.id + "\n")
-			stringV = comment.body.replace("Who is ","",1)
-			stringV = "https://en.wikipedia.org/wiki/%s" % (stringV)
+		
 		
 	else:
 		print "Duplicate found!"	
